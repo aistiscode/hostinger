@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  margin-top: 0;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown-timer span {
+  margin: 2rem 2rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}/*# sourceMappingURL=main.css.map */
