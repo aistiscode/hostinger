@@ -1,7 +1,10 @@
 header{
     display: flex;
     justify-content: space-around;
+    position: sticky;
+    top: 0;
 }
+
 ul{
     margin-top: 0;
 }
@@ -12,6 +15,7 @@ ul li{
 .introduction{
     display: flex;
     flex-direction: column;
+    
 }
 
 .countdown-timer span{
@@ -19,6 +23,10 @@ ul li{
     padding: 0.5rem;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.savings{
+    background-color: purple;
 }
 
 @media only screen and (min-width: 768px){
