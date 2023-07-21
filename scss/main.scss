@@ -1,6 +1,7 @@
 $color-purple: #2F1C6A;
 body{
     color: $color-purple;
+    font-family: 'DM Sans', sans-serif;
 }
 header{
     display: flex;
@@ -29,12 +30,17 @@ main{
 .introduction{
     display: flex;
     flex-direction: column;
-    .price{
-        font-size: 2rem;
-    }
+    
 }
 
+.price{
+    font-size: 2rem;
+    font-weight: 700;
+}
 
+.free-months{
+    font-weight: 700;
+}
 
 .countdown-timer{
     display: flex;

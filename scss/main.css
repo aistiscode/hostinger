@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   color: #2F1C6A;
+  font-family: "DM Sans", sans-serif;
 }
 
 header {
@@ -32,8 +33,14 @@ main {
   display: flex;
   flex-direction: column;
 }
-.introduction .price {
+
+.price {
   font-size: 2rem;
+  font-weight: 700;
+}
+
+.free-months {
+  font-weight: 700;
 }
 
 .countdown-timer {
