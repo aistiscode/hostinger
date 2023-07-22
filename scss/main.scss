@@ -9,9 +9,11 @@ header{
     align-items: center;
     position: sticky;
     top: 0;
-    height: 3rem;
+    height: 6vh;
+    border-bottom: 1px solid grey;
     background-color: white;
     ul{
+        display: none;
         margin: 0;
         li{
             padding-right: 2vw;
@@ -59,7 +61,6 @@ main{
 .introduction{
     display: flex;
     flex-direction: column;
-    
 }
 
 .price{
@@ -73,34 +74,34 @@ main{
 
 .countdown-timer{
     display: flex;
+    gap: 0.5rem;
     padding-bottom: 5vh;
     justify-content: center;
 }
 
-.countdown-timer span{
-    padding: 0.5rem;
+.countdown-timer span:nth-child(odd){
     border: 1px solid black;
     border-radius: 10px;
+    padding: 1rem;
 }
 
+.countdown-timer span:nth-child(even){
+    padding-top: 1rem;
+}
 
 .sample-site img{
     width: 90vw;
 }
 
 .discount-info{
-    display: flex;
-    flex-direction: row;
     margin-top: 24px;
 }
 .old-price{
-    width: 100px;
-    display: inline;
+    text-decoration: line-through;
 }
 .savings{
     background-color: purple; 
-    width: 100px;
-    display: inline;
+
 }
 
 .plan-card-container{
@@ -111,8 +112,11 @@ main{
     padding: 2vw;
 }
 
+
+body{
+    background-color: blue;
+}
 .plan-card-container>div{
-    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,8 +132,13 @@ main{
     color: green; /* Set the color to green */
     display: inline-block; /* Make the checkbox appear inline with the list item text */
     width: 1em; /* Adjust the width for proper spacing */
-    margin-left: -1em; /* Move the checkbox to the left to avoid overlapping with text */
+    margin-left: -1em;
   }
 @media only screen and (min-width: 768px){
-
+    header{
+        ul{
+            display: block;
+        }
+    }
+    
 }
