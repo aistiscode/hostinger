@@ -280,15 +280,15 @@ a{
         ul{
             display: block;
             align-self: center;
-            margin: 0; /* Add this to reset the margin */
-            padding: 0; /* Add this to reset the padding */
+            margin: 0; 
+            padding: 0; 
         }
         ul li {
-            display: inline-block; /* Add this to display li elements in the same line */
-            margin-right: 10px; /* Add this to add spacing between li elements */
+            display: inline-block; 
+            margin-right: 10px; 
         }
         ul li a {
-            padding: 5px 10px; /* Add this to add padding to the link elements */
+            padding: 5px 10px; 
         }
     }
     .header-left{
@@ -298,15 +298,15 @@ a{
     }
     .header-right{
         display: flex;
-        align-items: center; /* Add this to vertically align button with li elements */
+        align-items: center; 
     }
     .login-btn{
         border: 2px solid black;
         border-radius: 5px;
         padding: 0.75rem 1rem;
-        text-decoration: none; /* Add this to remove underline from the button */
-        color: $color-purple; /* Add this to maintain the color of the button text */
-        margin-left: 10px; /* Add this to add spacing between button and li elements */
+        text-decoration: none; 
+        color: $color-purple; 
+        margin-left: 10px; 
     }
 
     
