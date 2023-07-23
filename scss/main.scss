@@ -2,6 +2,8 @@ $color-purple: #2F1C6A;
 body{
     color: $color-purple;
     font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 header{
     display: flex;
@@ -19,16 +21,35 @@ header{
             padding-right: 2vw;
         }
     }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 32px;
+        
+    }
+    .language-selector{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .language-selector img{
+        width: 32px;
+        object-fit: contain;
+    }
 }
 .header-left{
+    width: 15%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .header-right{
     display: flex;
 }
 button{
     all: unset; 
-    
 }
 
 .select-btn{
