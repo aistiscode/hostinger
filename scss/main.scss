@@ -112,10 +112,6 @@ main{
     padding: 2vw;
 }
 
-
-body{
-    background-color: blue;
-}
 .plan-card-container>div{
     display: flex;
     flex-direction: column;
@@ -134,11 +130,30 @@ body{
     width: 1em; /* Adjust the width for proper spacing */
     margin-left: -1em;
   }
+
+  .site-type-desktop{
+    display: none;
+  }
 @media only screen and (min-width: 768px){
     header{
         ul{
             display: block;
         }
     }
-    
+    .site-type{
+        display: none;
+    }
+    .site-type-desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+        li{
+            padding: 0 0.5rem;
+        }
+    }
+    .site-type-desktop li:hover{
+        border-bottom: 1px solid blue;
+        color: blue;
+      }
 }
