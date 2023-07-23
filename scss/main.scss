@@ -1,11 +1,14 @@
 $color-purple: #2F1C6A;
-body{
+$color-lavender: #d5dfff;
+
+body {
     color: $color-purple;
     font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,45 +17,58 @@ header{
     height: 6vh;
     border-bottom: 1px solid grey;
     background-color: white;
-    ul{
-        display: none;
-        margin: 0;
-        li{
-            padding-right: 2vw;
+    padding: 1%;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $color-purple;
         }
     }
-    .logo{
-        display: flex;
-        align-items: center;
-    }
-    .logo img{
+
+    .logo img {
         width: 32px;
-        
     }
-    .language-selector{
-        display: flex;
+
+    .language-selector {
+        display: none;
         height: 100%;
         align-items: center;
+        
+
+        a {
+            text-decoration: none;
+            color: $color-purple;
+        }
     }
-    .language-selector img{
+
+    .language-selector img {
         width: 32px;
         object-fit: contain;
     }
 }
-.header-left{
+
+.header-left {
     width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-.header-right{
-    display: flex;
-}
-button{
-    all: unset; 
+    font-weight: 700;
 }
 
-.select-btn{
+.header-right {
+    display: none;
+}
+
+button {
+    all: unset; 
+    
+}
+
+.select-btn {
     background-color: purple;
     color: white;
     width: 20vw;
@@ -60,17 +76,26 @@ button{
     margin-top: 24px;
     padding: 12px 16px;
     margin: auto;
+    display: block;
+    text-align: center;
 }
 
-header ul{
+header ul {
     margin-top: 0;
 }
-header ul li{
+
+header ul li {
     list-style-type: none;
     display: inline-block;
+
+    a {
+        text-decoration: none;
+        color: $color-purple;
+        padding-right: 2vw;
+    }
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,85 +104,238 @@ main{
     margin-right: 5vw;
 }
 
-.introduction{
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+
+    .sample-site img {
+        max-width: 768px;
+    }
+}
+
+.introduction {
     display: flex;
     flex-direction: column;
 }
 
-.price{
+.price-card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    border-left: 1px solid $color-lavender;
+    border-right: 1px solid $color-lavender;
+}
+
+.price {
     font-size: 2rem;
     font-weight: 700;
 }
 
-.free-months{
+.free-months {
     font-weight: 700;
 }
 
-.countdown-timer{
+.countdown-timer {
     display: flex;
     gap: 0.5rem;
     padding-bottom: 5vh;
     justify-content: center;
 }
 
-.countdown-timer span:nth-child(odd){
+.countdown-timer span:nth-child(odd) {
     border: 1px solid black;
     border-radius: 10px;
     padding: 1rem;
 }
 
-.countdown-timer span:nth-child(even){
+.countdown-timer span:nth-child(even) {
     padding-top: 1rem;
 }
 
-.sample-site img{
+.sample-site img {
     width: 90vw;
 }
 
-.discount-info{
+.discount-info {
     margin-top: 24px;
 }
-.old-price{
+
+.old-price {
     text-decoration: line-through;
 }
-.savings{
-    background-color: purple; 
 
+.savings {
+    background-color: $color-lavender;
+    color: $color-purple;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
 }
 
-.plan-card-container{
+.plan-selection {
+    margin: auto;
+}
+
+.payment-conditions {
+    margin: auto;
+    text-align: center;
+}
+
+.plan-card-container {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid grey;
-    padding: 2vw;
+    border: 1px solid $color-lavender;
+    padding: 2.5rem 2rem 2.5rem 2rem;
+
+    .feature-card-2 {
+        display: none;
+    }
 }
 
-.plan-card-container>div{
+.plan-card-container > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
-.plan-card-container div ul{
+
+.plan-card-container div ul {
     text-align: left;
     margin: 0;
     list-style-type: none;
 }
 
 .plan-card-container ul li::before {
-    content: "\2713"; /* Unicode character for checkbox (checked) symbol */
-    color: green; /* Set the color to green */
-    display: inline-block; /* Make the checkbox appear inline with the list item text */
-    width: 1em; /* Adjust the width for proper spacing */
+    content: "\2713";
+    color: green;
+    display: inline-block;
+    width: 1em;
     margin-left: -1em;
-  }
+}
 
-  .site-type-desktop{
+.site-type-desktop {
     display: none;
-  }
+}
+
+.site-type-desktop li {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-purple;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.site-type-desktop li:hover {
+    border-bottom: 1px solid blue;
+    color: blue;
+}
+.ratings{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+.ratings>div{
+    height: 5vh;
+}
+.sample-image-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    gap: 1rem;
+
+    .desktop-only-image {
+        display: none;
+    }
+
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.desktop-only-sample {
+    display: none;
+}
+
+.site-types-info {
+    width: 70%;
+    margin: auto;
+}
 @media only screen and (min-width: 768px){
     header{
         ul{
+            display: block;
+            align-self: center;
+            margin: 0; /* Add this to reset the margin */
+            padding: 0; /* Add this to reset the padding */
+        }
+        ul li {
+            display: inline-block; /* Add this to display li elements in the same line */
+            margin-right: 10px; /* Add this to add spacing between li elements */
+        }
+        ul li a {
+            padding: 5px 10px; /* Add this to add padding to the link elements */
+        }
+    }
+    .header-left{
+        .language-selector{
+            display: flex;
+        }
+    }
+    .header-right{
+        display: flex;
+        align-items: center; /* Add this to vertically align button with li elements */
+    }
+    .login-btn{
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 0.75rem 1rem;
+        text-decoration: none; /* Add this to remove underline from the button */
+        color: $color-purple; /* Add this to maintain the color of the button text */
+        margin-left: 10px; /* Add this to add spacing between button and li elements */
+    }
+
+    
+
+    .intro{
+        display: flex;
+        flex-direction: row;
+        padding-top: 15vh;
+        justify-content: space-between;
+        .sample-site img{
+            max-width: 768px;
+        }
+    }
+    .introduction{
+        width: 30%;
+        align-items: flex-start;
+        .select-btn{
+            margin: 0;
+        }
+        .bonus-period{
+            text-align: left;
+        }
+        h1, p{
+            text-align: left;
+        }
+    }
+    .plan-card-container{
+        flex-direction: row;
+        .feature-card-2{
             display: block;
         }
     }
@@ -168,13 +346,29 @@ main{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-bottom: 3rem;
         list-style-type: none;
         li{
-            padding: 0 0.5rem;
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid grey;
+            color: grey;
+            font-size: 12px;
+            font-weight: 700;
         }
     }
     .site-type-desktop li:hover{
         border-bottom: 1px solid blue;
         color: blue;
+      }
+      .desktop-only-sample{
+        display: block;
+        object-fit: contain;
+        width: 5%;
+      }
+      .sample-image-container{
+        flex-direction: row;
+        .desktop-only-image{
+            display: block;
+        }
       }
 }

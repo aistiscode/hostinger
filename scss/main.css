@@ -15,25 +15,27 @@ header {
   height: 6vh;
   border-bottom: 1px solid grey;
   background-color: white;
-}
-header ul {
-  display: none;
-  margin: 0;
-}
-header ul li {
-  padding-right: 2vw;
+  padding: 1%;
 }
 header .logo {
   display: flex;
   align-items: center;
 }
+header .logo a {
+  text-decoration: none;
+  color: #2F1C6A;
+}
 header .logo img {
   width: 32px;
 }
 header .language-selector {
-  display: flex;
+  display: none;
   height: 100%;
   align-items: center;
+}
+header .language-selector a {
+  text-decoration: none;
+  color: #2F1C6A;
 }
 header .language-selector img {
   width: 32px;
@@ -46,10 +48,11 @@ header .language-selector img {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-weight: 700;
 }
 
 .header-right {
-  display: flex;
+  display: none;
 }
 
 button {
@@ -64,6 +67,8 @@ button {
   margin-top: 24px;
   padding: 12px 16px;
   margin: auto;
+  display: block;
+  text-align: center;
 }
 
 header ul {
@@ -73,6 +78,11 @@ header ul {
 header ul li {
   list-style-type: none;
   display: inline-block;
+}
+header ul li a {
+  text-decoration: none;
+  color: #2F1C6A;
+  padding-right: 2vw;
 }
 
 main {
@@ -84,9 +94,30 @@ main {
   margin-right: 5vw;
 }
 
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+.intro .sample-site img {
+  max-width: 768px;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  border-left: 1px solid #d5dfff;
+  border-right: 1px solid #d5dfff;
 }
 
 .price {
@@ -128,21 +159,39 @@ main {
 }
 
 .savings {
-  background-color: purple;
+  background-color: #d5dfff;
+  color: #2F1C6A;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.plan-selection {
+  margin: auto;
+}
+
+.payment-conditions {
+  margin: auto;
+  text-align: center;
 }
 
 .plan-card-container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid grey;
-  padding: 2vw;
+  border: 1px solid #d5dfff;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+}
+.plan-card-container .feature-card-2 {
+  display: none;
 }
 
 .plan-card-container > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .plan-card-container div ul {
@@ -152,10 +201,10 @@ main {
 }
 
 .plan-card-container ul li::before {
-  content: "✓"; /* Unicode character for checkbox (checked) symbol */
-  color: green; /* Set the color to green */
-  display: inline-block; /* Make the checkbox appear inline with the list item text */
-  width: 1em; /* Adjust the width for proper spacing */
+  content: "✓";
+  color: green;
+  display: inline-block;
+  width: 1em;
   margin-left: -1em;
 }
 
@@ -163,8 +212,118 @@ main {
   display: none;
 }
 
+.site-type-desktop li {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid grey;
+  color: grey;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #2F1C6A;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-type-desktop li:hover {
+  border-bottom: 1px solid blue;
+  color: blue;
+}
+
+.ratings {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.ratings > div {
+  height: 5vh;
+}
+
+.sample-image-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  gap: 1rem;
+}
+.sample-image-container .desktop-only-image {
+  display: none;
+}
+.sample-image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.desktop-only-sample {
+  display: none;
+}
+
+.site-types-info {
+  width: 70%;
+  margin: auto;
+}
+
 @media only screen and (min-width: 768px) {
   header ul {
+    display: block;
+    align-self: center;
+    margin: 0; /* Add this to reset the margin */
+    padding: 0; /* Add this to reset the padding */
+  }
+  header ul li {
+    display: inline-block; /* Add this to display li elements in the same line */
+    margin-right: 10px; /* Add this to add spacing between li elements */
+  }
+  header ul li a {
+    padding: 5px 10px; /* Add this to add padding to the link elements */
+  }
+  .header-left .language-selector {
+    display: flex;
+  }
+  .header-right {
+    display: flex;
+    align-items: center; /* Add this to vertically align button with li elements */
+  }
+  .login-btn {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    text-decoration: none; /* Add this to remove underline from the button */
+    color: #2F1C6A; /* Add this to maintain the color of the button text */
+    margin-left: 10px; /* Add this to add spacing between button and li elements */
+  }
+  .intro {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15vh;
+    justify-content: space-between;
+  }
+  .intro .sample-site img {
+    max-width: 768px;
+  }
+  .introduction {
+    width: 30%;
+    align-items: flex-start;
+  }
+  .introduction .select-btn {
+    margin: 0;
+  }
+  .introduction .bonus-period {
+    text-align: left;
+  }
+  .introduction h1, .introduction p {
+    text-align: left;
+  }
+  .plan-card-container {
+    flex-direction: row;
+  }
+  .plan-card-container .feature-card-2 {
     display: block;
   }
   .site-type {
@@ -174,13 +333,30 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 3rem;
     list-style-type: none;
   }
   .site-type-desktop li {
-    padding: 0 0.5rem;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 12px;
+    font-weight: 700;
   }
   .site-type-desktop li:hover {
     border-bottom: 1px solid blue;
     color: blue;
+  }
+  .desktop-only-sample {
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 5%;
+  }
+  .sample-image-container {
+    flex-direction: row;
+  }
+  .sample-image-container .desktop-only-image {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */
